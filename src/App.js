@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        "https://www.googleapis.com/books/v1/volumes?q=harry+potter&maxResults=20"
+        "https://www.googleapis.com/books/v1/volumes?q=sherlock+holmes&maxResults=30"
       )
       .then((res) => setBooks(res.data.items))
       .catch((err) => console.log(err));
@@ -21,7 +21,7 @@ const App = () => {
       <NavBar />
       {books ? <Books booksDetail={books} /> : ""}
 
-      <MoreBooks />
+      {books ? <MoreBooks booksDetail={books} /> : ""}
     </div>
   );
 };
