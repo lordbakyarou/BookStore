@@ -9,8 +9,14 @@ const MoreBooks = ({ booksDetail }) => {
       <div className="books-list">
         {booksDetail.map((book, index) => {
           return (
-            <div className="single-book">
-              <img src={book.volumeInfo.imageLinks.thumbnail}></img>
+            <div className="single-book" key={index}>
+              {book.volumeInfo.imageLinks &&
+                book.volumeInfo.imageLinks.thumbnail && (
+                  <img
+                    src={book.volumeInfo.imageLinks.thumbnail}
+                    alt={`Thumbnail for ${book.title}`}
+                  />
+                )}
             </div>
           );
         })}

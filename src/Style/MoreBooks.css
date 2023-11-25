@@ -5,7 +5,6 @@
 
 .more-books {
   background: #242121;
-
   padding: 30px;
   padding-top: 80px;
 }
@@ -34,6 +33,7 @@
   flex-shrink: 0;
   border-radius: 5px;
   box-shadow: 0px 7px 4px 0px rgba(110, 110, 110, 0.25);
+  cursor: pointer;
 }
 
 .single-book img {
