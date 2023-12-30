@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "../Style/navbar.css";
 
-const NavBar = ({ setQuery }) => {
+const NavBar = ({ setQuery, setBookClicked }) => {
   const [search, setSearch] = useState("");
   console.log(setQuery, "hi");
 
@@ -164,6 +164,7 @@ const NavBar = ({ setQuery }) => {
             placeholder="Search for the book you want and read it now... Sherlock Holmes, Harry Pot..."
             onChange={(e) => {
               setQuery(e.target.value);
+              setBookClicked(null);
             }}
           ></input>
         </div>

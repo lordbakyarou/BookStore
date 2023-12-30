@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div>
-      <NavBar setQuery={setQuery} />
+      <NavBar setQuery={setQuery} setBookClicked={setBookClicked} />
       {console.log(bookClicked)}
       {bookClicked ? (
         <BookDetails bookClicked={bookClicked} />
