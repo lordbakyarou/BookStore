@@ -17,7 +17,7 @@ const BookDetail = ({ bookClicked }) => {
         console.log(res.data, "mye");
       })
       .catch((err) => console.log(err, "mmmm"));
-  }, []);
+  }, [bookClicked]);
 
   return book ? (
     <div className="books-detail">
@@ -34,7 +34,11 @@ const BookDetail = ({ bookClicked }) => {
             <h3 className="book-title-detail">{book.volumeInfo.title}</h3>
             <h2 className="book-title-author">{book.volumeInfo.authors[0]}</h2>
             <p className="book-desc-detail">{book.volumeInfo.description}</p>
-
+            <h2 className="ratings">
+              Avg Rating : {book.volumeInfo.averageRating} | Rating Count :{" "}
+              {book.volumeInfo.ratingCount} | Publisher :{" "}
+              {book.volumeInfo.publisher} | Language :{book.volumeInfo.language}
+            </h2>
             <div className="button-info">
               {" "}
               <button

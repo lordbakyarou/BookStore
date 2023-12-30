@@ -6,7 +6,7 @@
 
 .books {
   display: flex;
-  /* justify-content: space-  ; */
+  justify-content: space-between;
   /* padding: 40px; */
   flex-direction: row;
   background: #242121;
