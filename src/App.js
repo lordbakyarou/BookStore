@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import NavBar from "./Components/NavBar";
 import Books from "./Components/Books";
 import MoreBooks from "./Components/MoreBooks";
+import BookDetails from "./Components/BookDetails";
 import axios from "axios";
 
 const App = () => {
   const [books, setBooks] = useState(undefined);
   const [query, setQuery] = useState(null);
+
+  const [bookClicked, setBookClicked] = useState(null);
 
   useEffect(() => {
     axios
@@ -23,9 +26,20 @@ const App = () => {
   return (
     <div>
       <NavBar setQuery={setQuery} />
-      {books != undefined ? <Books booksDetail={books} /> : ""}
+      {console.log(bookClicked)}
+      {bookClicked ? (
+        <BookDetails bookClicked={bookClicked} />
+      ) : books != undefined ? (
+        <Books booksDetail={books} setBookClicked={setBookClicked} />
+      ) : (
+        ""
+      )}
 
-      {books != undefined ? <MoreBooks booksDetail={books} /> : ""}
+      {books != undefined ? (
+        <MoreBooks booksDetail={books} setBookClicked={setBookClicked} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

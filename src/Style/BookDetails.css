@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.books {
+.books-detail {
   display: flex;
   /* justify-content: space-  ; */
   /* padding: 40px; */
@@ -17,8 +17,8 @@
   padding-inline: 30px;
 }
 
-.book-background {
-  width: 489px;
+.book-background-detail {
+  width: 100vw;
   height: 272px;
   flex-shrink: 0;
   border-radius: 5px;
@@ -27,7 +27,7 @@
   display: flex;
 }
 
-.books-img {
+.books-img-detail {
   display: flex;
   width: 202.89px;
   height: 299.22px;
@@ -38,23 +38,24 @@
   flex-shrink: 0;
 }
 
-.books-img img {
+.books-img-detail img {
   width: 210px;
   height: 310px;
   flex-shrink: 0;
   box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.book-info {
+.book-info-detail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 30px;
 }
 
-.book-title {
+.book-title-detail {
   color: #fff;
   font-family: Roboto;
   font-size: 35px;
@@ -64,17 +65,38 @@
   align-self: flex-start;
 }
 
-.book-desc {
-  color: #d2d2d2;
-  width: 237px;
+.book-title-author {
+  color: rgba(255, 255, 255, 0.5);
+  align-self: flex-start;
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
 }
 
-.readmore {
+.book-desc-detail {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 96px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.button-info {
+  display: flex;
+  gap: 20px;
+  align-self: flex-end;
+  padding-right: 10px;
+}
+
+.button-info .readmore-detail {
   width: 148px;
   height: 33px;
   flex-shrink: 0;
@@ -87,8 +109,13 @@
   line-height: normal;
   background: transparent;
   cursor: pointer;
+  align-self: flex-end;
 }
 
-.books::-webkit-scrollbar {
+.books-detail::-webkit-scrollbar {
+  display: none;
+}
+
+.book-desc-detail::-webkit-scrollbar {
   display: none;
 }

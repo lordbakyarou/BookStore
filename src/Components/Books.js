@@ -1,7 +1,7 @@
 import React from "react";
 import "../Style/Books.css";
 
-const Books = ({ booksDetail }) => {
+const Books = ({ booksDetail, setBookClicked }) => {
   console.log(booksDetail);
   //   booksDetail
   //     .then((res) => console.log(res.items))
@@ -37,9 +37,9 @@ const Books = ({ booksDetail }) => {
                 <p className="book-desc">{book.searchInfo.textSnippet}</p>
                 <button
                   className="readmore"
-                  onClick={() =>
-                    (window.location.href = book.volumeInfo.previewLink)
-                  }
+                  onClick={() => {
+                    setBookClicked(book.id);
+                  }}
                 >
                   Now Read!
                 </button>
